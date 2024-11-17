@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-10-09T21:58:41.382933" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste Dias Meses" source="C:\Users\Act Digital\Documents\Robot Framework\teste_dias_meses.robot">
+<test id="s1-t1" name="Imprimir Meses e Dias" line="8">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Janeiro tem ${meses_com_dias.Janeiro} dias.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-09T21:58:41.419490" elapsed="0.000782"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Fevereiro tem ${meses_com_dias.Fevereiro} dias.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-09T21:58:41.420272" elapsed="0.001122"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Março tem ${meses_com_dias.Março} dias.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-09T21:58:41.421394" elapsed="0.001305"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Abril tem ${meses_com_dias.Abril} dias.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-09T21:58:41.422699" elapsed="0.001306"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Maio tem ${meses_com_dias.Maio} dias.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-09T21:58:41.424005" elapsed="0.001565"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Junho tem ${meses_com_dias.Junho} dias.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-09T21:58:41.425570" elapsed="0.001003"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Julho tem ${meses_com_dias.Julho} dias.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-09T21:58:41.426981" elapsed="0.000628"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Agosto tem ${meses_com_dias.Agosto} dias.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-09T21:58:41.427609" elapsed="0.000506"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Setembro tem ${meses_com_dias.Setembro} dias.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-09T21:58:41.428115" elapsed="0.001001"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Outubro tem ${meses_com_dias.Outubro} dias.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-09T21:58:41.429116" elapsed="0.001212"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Novembro tem ${meses_com_dias.Novembro} dias.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-09T21:58:41.430328" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Dezembro tem ${meses_com_dias.Dezembro} dias.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-10-09T21:58:41.431836" elapsed="0.000000"/>
+</kw>
+<doc>Este teste imprime cada mês e a quantidade de dias no console.</doc>
+<status status="PASS" start="2024-10-09T21:58:41.417944" elapsed="0.013892"/>
+</test>
+<status status="PASS" start="2024-10-09T21:58:41.384928" elapsed="0.047914"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste Dias Meses">Teste Dias Meses</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-10-10T10:31:30.656001" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot Framework" source="C:\Users\Act Digital\Documents\Robot Framework">
+<suite id="s1-s1" name="Amazon-Tests" source="C:\Users\Act Digital\Documents\Robot Framework\amazon-tests">
+<suite id="s1-s1-s1" name="Tests" source="C:\Users\Act Digital\Documents\Robot Framework\amazon-tests\tests">
+<suite id="s1-s1-s1-s1" name="Amazon Tests" source="C:\Users\Act Digital\Documents\Robot Framework\amazon-tests\tests\amazon_tests.robot">
+<test id="s1-s1-s1-s1-t1" name="Caso de Teste 01 - Acesso ao Menu &quot;Eletrônicos&quot;" line="8">
+<kw name="Abrir o Navegador" type="SETUP">
+<msg time="2024-10-10T10:31:30.709135" level="FAIL">No keyword with name 'Abrir o Navegador' found.</msg>
+<status status="FAIL" start="2024-10-10T10:31:30.708138" elapsed="0.002263">No keyword with name 'Abrir o Navegador' found.</status>
+</kw>
+<kw name="Fechar o Navegador" type="TEARDOWN">
+<msg time="2024-10-10T10:31:30.713996" level="FAIL">No keyword with name 'Fechar o Navegador' found.</msg>
+<status status="FAIL" start="2024-10-10T10:31:30.713489" elapsed="0.001511">No keyword with name 'Fechar o Navegador' found.</status>
+</kw>
+<doc>Este teste acessa a homepage e navega até o menu "Eletrônicos".</doc>
+<tag>menu_eletronicos</tag>
+<status status="FAIL" start="2024-10-10T10:31:30.705161" elapsed="0.012009">Setup failed:
+No keyword with name 'Abrir o Navegador' found.
+
+Also teardown failed:
+No keyword with name 'Fechar o Navegador' found.</status>
+</test>
+<test id="s1-s1-s1-s1-t2" name="Caso de Teste 02 - Pesquisa de um Produto" line="16">
+<kw name="Abrir o Navegador" type="SETUP">
+<msg time="2024-10-10T10:31:30.724089" level="FAIL">No keyword with name 'Abrir o Navegador' found.</msg>
+<status status="FAIL" start="2024-10-10T10:31:30.722854" elapsed="0.002240">No keyword with name 'Abrir o Navegador' found.</status>
+</kw>
+<kw name="Fechar o Navegador" type="TEARDOWN">
+<msg time="2024-10-10T10:31:30.729410" level="FAIL">No keyword with name 'Fechar o Navegador' found.</msg>
+<status status="FAIL" start="2024-10-10T10:31:30.728414" elapsed="0.002504">No keyword with name 'Fechar o Navegador' found.</status>
+</kw>
+<doc>Este teste acessa a homepage e pesquisa por um produto específico.</doc>
+<tag>pesquisa_produto</tag>
+<status status="FAIL" start="2024-10-10T10:31:30.720715" elapsed="0.011511">Setup failed:
+No keyword with name 'Abrir o Navegador' found.
+
+Also teardown failed:
+No keyword with name 'Fechar o Navegador' found.</status>
+</test>
+<status status="FAIL" start="2024-10-10T10:31:30.698159" elapsed="0.036076"/>
+</suite>
+<status status="FAIL" start="2024-10-10T10:31:30.694957" elapsed="0.041829"/>
+</suite>
+<status status="FAIL" start="2024-10-10T10:31:30.691102" elapsed="0.048096"/>
+</suite>
+<status status="FAIL" start="2024-10-10T10:31:30.661781" elapsed="0.078478"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">menu_eletronicos</stat>
+<stat pass="0" fail="1" skip="0">pesquisa_produto</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Robot Framework">Robot Framework</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1" name="Amazon-Tests">Robot Framework.Amazon-Tests</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1-s1" name="Tests">Robot Framework.Amazon-Tests.Tests</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1-s1-s1" name="Amazon Tests">Robot Framework.Amazon-Tests.Tests.Amazon Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-10T10:31:30.701735" level="ERROR">Error in file 'C:\Users\Act Digital\Documents\Robot Framework\amazon-tests\tests\amazon_tests.robot' on line 2: Resource file 'resources\keywords\amazon_keywords.robot' does not exist.</msg>
+</errors>
+</robot>
