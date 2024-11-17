@@ -1,67 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-10-10T10:31:30.656001" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-11-17T00:15:40.497929" rpa="false" schemaversion="5">
 <suite id="s1" name="Robot Framework" source="C:\Users\Act Digital\Documents\Robot Framework">
 <suite id="s1-s1" name="Amazon-Tests" source="C:\Users\Act Digital\Documents\Robot Framework\amazon-tests">
 <suite id="s1-s1-s1" name="Tests" source="C:\Users\Act Digital\Documents\Robot Framework\amazon-tests\tests">
 <suite id="s1-s1-s1-s1" name="Amazon Tests" source="C:\Users\Act Digital\Documents\Robot Framework\amazon-tests\tests\amazon_tests.robot">
-<test id="s1-s1-s1-s1-t1" name="Caso de Teste 01 - Acesso ao Menu &quot;Eletrônicos&quot;" line="8">
-<kw name="Abrir o Navegador" type="SETUP">
-<msg time="2024-10-10T10:31:30.709135" level="FAIL">No keyword with name 'Abrir o Navegador' found.</msg>
-<status status="FAIL" start="2024-10-10T10:31:30.708138" elapsed="0.002263">No keyword with name 'Abrir o Navegador' found.</status>
+<test id="s1-s1-s1-s1-t1" name="Caso de Teste 02 - Pesquisa de um Produto" line="16">
+<kw name="Abrir o Navegador" owner="amazon_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-11-17T00:15:41.459808" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br/'.</msg>
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-11-17T00:15:41.458618" elapsed="9.029471"/>
 </kw>
-<kw name="Fechar o Navegador" type="TEARDOWN">
-<msg time="2024-10-10T10:31:30.713996" level="FAIL">No keyword with name 'Fechar o Navegador' found.</msg>
-<status status="FAIL" start="2024-10-10T10:31:30.713489" elapsed="0.001511">No keyword with name 'Fechar o Navegador' found.</status>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-17T00:15:50.489093" elapsed="0.326127"/>
 </kw>
-<doc>Este teste acessa a homepage e navega até o menu "Eletrônicos".</doc>
-<tag>menu_eletronicos</tag>
-<status status="FAIL" start="2024-10-10T10:31:30.705161" elapsed="0.012009">Setup failed:
-No keyword with name 'Abrir o Navegador' found.
-
-Also teardown failed:
-No keyword with name 'Fechar o Navegador' found.</status>
-</test>
-<test id="s1-s1-s1-s1-t2" name="Caso de Teste 02 - Pesquisa de um Produto" line="16">
-<kw name="Abrir o Navegador" type="SETUP">
-<msg time="2024-10-10T10:31:30.724089" level="FAIL">No keyword with name 'Abrir o Navegador' found.</msg>
-<status status="FAIL" start="2024-10-10T10:31:30.722854" elapsed="0.002240">No keyword with name 'Abrir o Navegador' found.</status>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(@class,'nav-logo-link')]</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-17T00:15:50.816215" elapsed="0.284700"/>
 </kw>
-<kw name="Fechar o Navegador" type="TEARDOWN">
-<msg time="2024-10-10T10:31:30.729410" level="FAIL">No keyword with name 'Fechar o Navegador' found.</msg>
-<status status="FAIL" start="2024-10-10T10:31:30.728414" elapsed="0.002504">No keyword with name 'Fechar o Navegador' found.</status>
+<status status="PASS" start="2024-11-17T00:15:41.456588" elapsed="9.644327"/>
+</kw>
+<kw name="Acessar Home Page" owner="amazon_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-17T00:15:51.105193" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
+<arg>${DEFAULT_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-17T00:15:51.104194" elapsed="1.723685"/>
+</kw>
+<status status="PASS" start="2024-11-17T00:15:51.101918" elapsed="1.727366"/>
+</kw>
+<kw name="Pesquisar Produto" owner="amazon_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-17T00:15:52.831705" level="INFO">Typing text 'PlayStation 5' into text field 'id=twotabsearchtextbox'.</msg>
+<arg>id=twotabsearchtextbox</arg>
+<arg>${produto}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-17T00:15:52.830700" elapsed="1.211084"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-17T00:15:54.043786" level="INFO">Clicking button 'id=nav-search-submit-button'.</msg>
+<arg>id=nav-search-submit-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-17T00:15:54.042790" elapsed="3.081484"/>
+</kw>
+<arg>PlayStation 5</arg>
+<status status="PASS" start="2024-11-17T00:15:52.829284" elapsed="4.294990"/>
+</kw>
+<kw name="Verificar Resultado da Pesquisa" owner="amazon_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//span[contains(@class,'a-text-normal')]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-17T00:15:57.126576" elapsed="0.167772"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-17T00:15:57.411194" level="INFO">${resultado_produto} = Consulte as páginas dos produtos para ver outras opções de compra.</msg>
+<var>${resultado_produto}</var>
+<arg>xpath=//span[contains(@class,'a-text-normal')][1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-17T00:15:57.294348" elapsed="0.117958"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2024-11-17T00:15:57.414193" level="FAIL">'Consulte as páginas dos produtos para ver outras opções de compra.' does not contain 'PlayStation 5'</msg>
+<arg>${resultado_produto}</arg>
+<arg>${produto}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="FAIL" start="2024-11-17T00:15:57.412306" elapsed="0.003357">'Consulte as páginas dos produtos para ver outras opções de compra.' does not contain 'PlayStation 5'</status>
+</kw>
+<arg>PlayStation 5</arg>
+<status status="FAIL" start="2024-11-17T00:15:57.125343" elapsed="0.291376">'Consulte as páginas dos produtos para ver outras opções de compra.' does not contain 'PlayStation 5'</status>
+</kw>
+<kw name="Fechar o Navegador" owner="amazon_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-11-17T00:15:57.419845" elapsed="2.850086"/>
+</kw>
+<status status="PASS" start="2024-11-17T00:15:57.418839" elapsed="2.851092"/>
 </kw>
 <doc>Este teste acessa a homepage e pesquisa por um produto específico.</doc>
 <tag>pesquisa_produto</tag>
-<status status="FAIL" start="2024-10-10T10:31:30.720715" elapsed="0.011511">Setup failed:
-No keyword with name 'Abrir o Navegador' found.
-
-Also teardown failed:
-No keyword with name 'Fechar o Navegador' found.</status>
+<status status="FAIL" start="2024-11-17T00:15:41.454525" elapsed="18.815406">'Consulte as páginas dos produtos para ver outras opções de compra.' does not contain 'PlayStation 5'</status>
 </test>
-<status status="FAIL" start="2024-10-10T10:31:30.698159" elapsed="0.036076"/>
+<status status="FAIL" start="2024-11-17T00:15:40.790397" elapsed="19.479534"/>
 </suite>
-<status status="FAIL" start="2024-10-10T10:31:30.694957" elapsed="0.041829"/>
+<status status="FAIL" start="2024-11-17T00:15:40.741438" elapsed="19.528493"/>
 </suite>
-<status status="FAIL" start="2024-10-10T10:31:30.691102" elapsed="0.048096"/>
+<status status="FAIL" start="2024-11-17T00:15:40.723062" elapsed="19.546869"/>
 </suite>
-<status status="FAIL" start="2024-10-10T10:31:30.661781" elapsed="0.078478"/>
+<status status="FAIL" start="2024-11-17T00:15:40.546363" elapsed="19.723568"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="2" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">menu_eletronicos</stat>
 <stat pass="0" fail="1" skip="0">pesquisa_produto</stat>
 </tag>
 <suite>
-<stat pass="0" fail="2" skip="0" id="s1" name="Robot Framework">Robot Framework</stat>
-<stat pass="0" fail="2" skip="0" id="s1-s1" name="Amazon-Tests">Robot Framework.Amazon-Tests</stat>
-<stat pass="0" fail="2" skip="0" id="s1-s1-s1" name="Tests">Robot Framework.Amazon-Tests.Tests</stat>
-<stat pass="0" fail="2" skip="0" id="s1-s1-s1-s1" name="Amazon Tests">Robot Framework.Amazon-Tests.Tests.Amazon Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robot Framework">Robot Framework</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Amazon-Tests">Robot Framework.Amazon-Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Tests">Robot Framework.Amazon-Tests.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Amazon Tests">Robot Framework.Amazon-Tests.Tests.Amazon Tests</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-10-10T10:31:30.701735" level="ERROR">Error in file 'C:\Users\Act Digital\Documents\Robot Framework\amazon-tests\tests\amazon_tests.robot' on line 2: Resource file 'resources\keywords\amazon_keywords.robot' does not exist.</msg>
 </errors>
 </robot>
