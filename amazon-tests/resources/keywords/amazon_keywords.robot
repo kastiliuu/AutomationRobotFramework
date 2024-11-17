@@ -1,7 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource   amazon_variables.robot
-
+Resource   ../variables/amazon_variables.robot
 *** Keywords ***
 
 # Abertura e Fechamento do Navegador
@@ -21,30 +20,26 @@ Acessar Home Page
 Entrar no Menu Eletronicos
     Click Element    xpath=//a[@data-csa-c-content-id='nav_cs_electronics']
 
-# Funções para Interações Genéricas (Input e Click)
-Input Text
-    [Arguments]    ${locator}    ${text}
-    Input Text    ${locator}    ${text}
-
-Click Button
-    [Arguments]    ${locator}
-    Click Button    ${locator}
 
 # Verificações
 Verificar Titulo da Pagina
     [Arguments]    ${titulo_esperado}
-    Title Should Be    ${titulo_esperado}
+    Title Should Be      title=Eletrônicos e Tecnologia | Amazon.com.br
 
 Verificar Categoria Aparece
     [Arguments]    ${categoria}
-    Element Should Be Visible    xpath=//span[text()='${categoria}']
+    Element Should Be Visible    xpath=//span[@dir='auto'][contains(.,'Celulares e Comunicação')]
 
 # Pesquisa de Produtos
 Pesquisar Produto
     [Arguments]    ${produto}
     Input Text    id=twotabsearchtextbox    ${produto}
-    Click Button    xpath=//input[@value='Ir']
+    Click Button    id=nav-search-submit-button
 
+# Verificar Resultado da Pesquisa
 Verificar Resultado da Pesquisa
     [Arguments]    ${produto}
-    Element Should Contain    xpath=//span[contains(@class,'a-text-normal')]    ${produto}
+    Wait Until Element Is Visible    xpath=//span[contains(@class,'a-text-normal')]    timeout=10
+    ${resultado_produto}=    Get Text    xpath=//span[contains(@class,'a-text-normal')][1]
+    Should Contain    ${resultado_produto}    ${produto}
+

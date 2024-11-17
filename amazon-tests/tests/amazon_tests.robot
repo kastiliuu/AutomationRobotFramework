@@ -1,5 +1,5 @@
 *** Settings ***
-Resource        resources/keywords/amazon_keywords.robot
+Resource   ../resources/keywords/amazon_keywords.robot
 Test Setup      Abrir o Navegador
 Test Teardown   Fechar o Navegador
 
@@ -17,5 +17,5 @@ Caso de Teste 02 - Pesquisa de um Produto
     [Documentation]    Este teste acessa a homepage e pesquisa por um produto específico.
     [Tags]    pesquisa_produto
     Acessar Home Page
-    Pesquisar Produto    Echo Dot
-    Verificar Resultado da Pesquisa    Echo Dot
+    Pesquisar Produto    PlayStation 5
+    Verificar Resultado da Pesquisa    PlayStation 5
