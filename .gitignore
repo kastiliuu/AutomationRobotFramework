@@ -1,0 +1,31 @@
+# Diretórios de execução de Robot Framework
+**/output/
+**/logs/
+**/report/
+
+# Screenshots gerados pelos testes
+**/screenshots/
+
+# Arquivos temporários ou de backup
+*.bak
+*.swp
+*~
+*.orig
+
+# Arquivos de cobertura de testes (caso use)
+coverage/
+
+# Arquivos específicos de sistemas operacionais
+.DS_Store           # MacOS
+Thumbs.db           # Windows
+
+# Arquivos de configuração locais
+*.env
+
+# Arquivos de build
+dist/
+build/
+tmp/
+
+# Arquivos de cache
+__pycache__/
