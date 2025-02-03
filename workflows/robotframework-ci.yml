@@ -1,0 +1,44 @@
+name: Robot Framework CI/CD
+
+on:
+  push:
+    branches:
+      - main  # ou o nome da sua branch principal, como "novos_cenarios_saucedemo"
+  pull_request:
+    branches:
+      - main  # ou a branch onde você deseja testar as alterações
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out o código
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      # Configurar o Python e instalar dependências
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'  # Escolha a versão que você está utilizando
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install robotframework
+          pip install selenium
+
+      # Rodar os testes com Robot Framework
+      - name: Run Robot Framework tests
+        run: |
+          robot amazon-tests/tests/saucedemo_tests.robot  # Altere o caminho conforme o arquivo de teste
+          
+      # Upload de relatórios (opcional)
+      - name: Upload Robot Framework report to GitHub
+        uses: actions/upload-artifact@v2
+        with:
+          name: robot-framework-report
+          path: results/
+
+      # Se desejar, você pode adicionar a etapa de limpeza, para fechar o navegador, etc.
