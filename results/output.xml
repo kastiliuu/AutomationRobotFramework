@@ -1,111 +1,241 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-11-17T00:15:40.497929" rpa="false" schemaversion="5">
-<suite id="s1" name="Robot Framework" source="C:\Users\Act Digital\Documents\Robot Framework">
-<suite id="s1-s1" name="Amazon-Tests" source="C:\Users\Act Digital\Documents\Robot Framework\amazon-tests">
-<suite id="s1-s1-s1" name="Tests" source="C:\Users\Act Digital\Documents\Robot Framework\amazon-tests\tests">
-<suite id="s1-s1-s1-s1" name="Amazon Tests" source="C:\Users\Act Digital\Documents\Robot Framework\amazon-tests\tests\amazon_tests.robot">
-<test id="s1-s1-s1-s1-t1" name="Caso de Teste 02 - Pesquisa de um Produto" line="16">
-<kw name="Abrir o Navegador" owner="amazon_keywords" type="SETUP">
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2025-02-03T18:25:30.447568" rpa="false" schemaversion="5">
+<suite id="s1" name="AutomationRobotFramework" source="C:\Users\Act Digital\Documents\AutomationRobotFramework">
+<suite id="s1-s1" name="Amazon-Tests" source="C:\Users\Act Digital\Documents\AutomationRobotFramework\amazon-tests">
+<suite id="s1-s1-s1" name="Tests" source="C:\Users\Act Digital\Documents\AutomationRobotFramework\amazon-tests\tests">
+<suite id="s1-s1-s1-s1" name="Saucedemo Tests" source="C:\Users\Act Digital\Documents\AutomationRobotFramework\amazon-tests\tests\saucedemo_tests.robot">
+<test id="s1-s1-s1-s1-t1" name="Caso de Teste 01: Login com sucesso" line="15">
+<kw name="Configurar Navegador" owner="saucedemo_keywords" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-11-17T00:15:41.459808" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com.br/'.</msg>
-<arg>${url}</arg>
+<msg time="2025-02-03T18:25:30.728937" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-11-17T00:15:41.458618" elapsed="9.029471"/>
+<status status="PASS" start="2025-02-03T18:25:30.726570" elapsed="19.987784"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-17T00:15:50.489093" elapsed="0.326127"/>
+<status status="PASS" start="2025-02-03T18:25:50.714354" elapsed="0.033100"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//a[contains(@class,'nav-logo-link')]</arg>
-<arg>timeout=5</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-17T00:15:50.816215" elapsed="0.284700"/>
+<status status="PASS" start="2025-02-03T18:25:30.726570" elapsed="20.022883"/>
 </kw>
-<status status="PASS" start="2024-11-17T00:15:41.456588" elapsed="9.644327"/>
+<kw name="Para cada usuário ${usuario} de ${USUARIOS_VALIDOS}">
+<msg time="2025-02-03T18:25:50.754660" level="FAIL">No keyword with name 'Para cada usuário ${usuario} de ${USUARIOS_VALIDOS}' found.</msg>
+<status status="FAIL" start="2025-02-03T18:25:50.753166" elapsed="0.002501">No keyword with name 'Para cada usuário ${usuario} de ${USUARIOS_VALIDOS}' found.</status>
 </kw>
-<kw name="Acessar Home Page" owner="amazon_keywords">
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-17T00:15:51.105193" level="INFO">Opening url 'https://www.amazon.com.br/'</msg>
-<arg>${DEFAULT_URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-17T00:15:51.104194" elapsed="1.723685"/>
+<kw name="Dado que o usuário está na página de login" owner="saucedemo_keywords">
+<status status="NOT RUN" start="2025-02-03T18:25:50.764011" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-11-17T00:15:51.101918" elapsed="1.727366"/>
+<kw name="Quando ele insere o usuário ${usuario} e a senha ${SENHA_COMUM}">
+<status status="NOT RUN" start="2025-02-03T18:25:50.765745" elapsed="0.002013"/>
 </kw>
-<kw name="Pesquisar Produto" owner="amazon_keywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-17T00:15:52.831705" level="INFO">Typing text 'PlayStation 5' into text field 'id=twotabsearchtextbox'.</msg>
-<arg>id=twotabsearchtextbox</arg>
-<arg>${produto}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T00:15:52.830700" elapsed="1.211084"/>
+<kw name="E clica no botão de login" owner="saucedemo_keywords">
+<status status="NOT RUN" start="2025-02-03T18:25:50.767758" elapsed="0.000000"/>
 </kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-17T00:15:54.043786" level="INFO">Clicking button 'id=nav-search-submit-button'.</msg>
-<arg>id=nav-search-submit-button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T00:15:54.042790" elapsed="3.081484"/>
+<kw name="Então ele deve ver a página inicial" owner="saucedemo_keywords">
+<status status="NOT RUN" start="2025-02-03T18:25:50.767758" elapsed="0.000000"/>
 </kw>
-<arg>PlayStation 5</arg>
-<status status="PASS" start="2024-11-17T00:15:52.829284" elapsed="4.294990"/>
+<kw name="Fechar o Navegador" type="TEARDOWN">
+<msg time="2025-02-03T18:25:50.777277" level="FAIL">No keyword with name 'Fechar o Navegador' found.</msg>
+<status status="FAIL" start="2025-02-03T18:25:50.773822" elapsed="0.004877">No keyword with name 'Fechar o Navegador' found.</status>
 </kw>
-<kw name="Verificar Resultado da Pesquisa" owner="amazon_keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath=//span[contains(@class,'a-text-normal')]</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-17T00:15:57.126576" elapsed="0.167772"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-11-17T00:15:57.411194" level="INFO">${resultado_produto} = Consulte as páginas dos produtos para ver outras opções de compra.</msg>
-<var>${resultado_produto}</var>
-<arg>xpath=//span[contains(@class,'a-text-normal')][1]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-17T00:15:57.294348" elapsed="0.117958"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<msg time="2024-11-17T00:15:57.414193" level="FAIL">'Consulte as páginas dos produtos para ver outras opções de compra.' does not contain 'PlayStation 5'</msg>
-<arg>${resultado_produto}</arg>
-<arg>${produto}</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2024-11-17T00:15:57.412306" elapsed="0.003357">'Consulte as páginas dos produtos para ver outras opções de compra.' does not contain 'PlayStation 5'</status>
-</kw>
-<arg>PlayStation 5</arg>
-<status status="FAIL" start="2024-11-17T00:15:57.125343" elapsed="0.291376">'Consulte as páginas dos produtos para ver outras opções de compra.' does not contain 'PlayStation 5'</status>
-</kw>
-<kw name="Fechar o Navegador" owner="amazon_keywords" type="TEARDOWN">
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-11-17T00:15:57.419845" elapsed="2.850086"/>
-</kw>
-<status status="PASS" start="2024-11-17T00:15:57.418839" elapsed="2.851092"/>
-</kw>
-<doc>Este teste acessa a homepage e pesquisa por um produto específico.</doc>
-<tag>pesquisa_produto</tag>
-<status status="FAIL" start="2024-11-17T00:15:41.454525" elapsed="18.815406">'Consulte as páginas dos produtos para ver outras opções de compra.' does not contain 'PlayStation 5'</status>
+<doc>Este teste acessa a página inicial do SauceDemo e realiza login com sucesso.</doc>
+<tag>saucedemo</tag>
+<status status="FAIL" start="2025-02-03T18:25:30.725038" elapsed="20.055699">No keyword with name 'Para cada usuário ${usuario} de ${USUARIOS_VALIDOS}' found.
+
+Also teardown failed:
+No keyword with name 'Fechar o Navegador' found.</status>
 </test>
-<status status="FAIL" start="2024-11-17T00:15:40.790397" elapsed="19.479534"/>
+<test id="s1-s1-s1-s1-t2" name="Caso de Teste 02: Login com credenciais inválidas" line="24">
+<kw name="Configurar Navegador" owner="saucedemo_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-03T18:25:50.784011" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-03T18:25:50.784011" elapsed="6.734633"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-03T18:25:57.519642" elapsed="0.037071"/>
+</kw>
+<status status="PASS" start="2025-02-03T18:25:50.784011" elapsed="6.773975"/>
+</kw>
+<kw name="Dado que o usuário está na página de login" owner="saucedemo_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-03T18:25:57.560760" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-03T18:25:57.560760" elapsed="3.498521"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-03T18:26:01.060890" elapsed="3.765420"/>
+</kw>
+<status status="PASS" start="2025-02-03T18:25:57.559506" elapsed="7.266804"/>
+</kw>
+<kw name="Quando ele insere o usuário &quot;usuario_invalido&quot; e a senha &quot;senha_errada&quot;" owner="saucedemo_keywords" source_name="Quando ele insere o usuário &quot;${usuario}&quot; e a senha &quot;${senha}&quot;">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-03T18:26:04.831211" level="INFO">Typing text 'usuario_invalido' into text field 'id=username'.</msg>
+<msg time="2025-02-03T18:26:04.977027" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-03T18:26:04.977027" level="FAIL">Element with locator 'id=username' not found.</msg>
+<arg>${CAMPO_USUARIO}</arg>
+<arg>${usuario}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-02-03T18:26:04.830158" elapsed="0.165983">Element with locator 'id=username' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${CAMPO_SENHA}</arg>
+<arg>${senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-03T18:26:04.996141" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-02-03T18:26:04.826310" elapsed="0.169831">Element with locator 'id=username' not found.</status>
+</kw>
+<kw name="E clica no botão de login" owner="saucedemo_keywords">
+<status status="NOT RUN" start="2025-02-03T18:26:04.998824" elapsed="0.000000"/>
+</kw>
+<kw name="Então ele deve ver uma mensagem de erro">
+<status status="NOT RUN" start="2025-02-03T18:26:04.998824" elapsed="0.003735"/>
+</kw>
+<kw name="Fechar o Navegador" type="TEARDOWN">
+<msg time="2025-02-03T18:26:05.010065" level="FAIL">No keyword with name 'Fechar o Navegador' found.</msg>
+<status status="FAIL" start="2025-02-03T18:26:05.006284" elapsed="0.006396">No keyword with name 'Fechar o Navegador' found.</status>
+</kw>
+<status status="FAIL" start="2025-02-03T18:25:50.782964" elapsed="14.232935">Element with locator 'id=username' not found.
+
+Also teardown failed:
+No keyword with name 'Fechar o Navegador' found.</status>
+</test>
+<test id="s1-s1-s1-s1-t3" name="Caso de Teste 03: Adicionar um produto ao carrinho" line="30">
+<kw name="Configurar Navegador" owner="saucedemo_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-03T18:26:05.022691" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-03T18:26:05.022691" elapsed="6.290675"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-03T18:26:11.313366" elapsed="0.042794"/>
+</kw>
+<status status="PASS" start="2025-02-03T18:26:05.021018" elapsed="6.335142"/>
+</kw>
+<kw name="Dado que o usuário está logado no sistema" owner="saucedemo_keywords">
+<kw name="standard_user">
+<msg time="2025-02-03T18:26:11.366795" level="FAIL">No keyword with name 'standard_user' found.</msg>
+<var>${usuario}</var>
+<var>${senha}</var>
+<arg>secret_sauce</arg>
+<status status="FAIL" start="2025-02-03T18:26:11.363312" elapsed="0.006159">No keyword with name 'standard_user' found.</status>
+</kw>
+<kw name="Dado que o usuário está na página de login" owner="saucedemo_keywords">
+<status status="NOT RUN" start="2025-02-03T18:26:11.374437" elapsed="0.002359"/>
+</kw>
+<kw name="Quando ele insere o usuário &quot;${usuario}&quot; e a senha &quot;${senha}&quot;" owner="saucedemo_keywords" source_name="Quando ele insere o usuário &quot;${usuario}&quot; e a senha &quot;${senha}&quot;">
+<status status="NOT RUN" start="2025-02-03T18:26:11.376796" elapsed="0.001702"/>
+</kw>
+<kw name="E clica no botão de login" owner="saucedemo_keywords">
+<status status="NOT RUN" start="2025-02-03T18:26:11.380295" elapsed="0.000000"/>
+</kw>
+<kw name="Então ele deve ver a página inicial" owner="saucedemo_keywords">
+<status status="NOT RUN" start="2025-02-03T18:26:11.380295" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-02-03T18:26:11.358819" elapsed="0.021476">No keyword with name 'standard_user' found.</status>
+</kw>
+<kw name="Quando ele adiciona o produto &quot;${PRODUTO}&quot; ao carrinho">
+<status status="NOT RUN" start="2025-02-03T18:26:11.380295" elapsed="0.000000"/>
+</kw>
+<kw name="Então ele deve ver que o carrinho contém &quot;1&quot; item">
+<status status="NOT RUN" start="2025-02-03T18:26:11.380295" elapsed="0.000000"/>
+</kw>
+<kw name="Fechar o Navegador" type="TEARDOWN">
+<msg time="2025-02-03T18:26:11.397069" level="FAIL">No keyword with name 'Fechar o Navegador' found.</msg>
+<status status="FAIL" start="2025-02-03T18:26:11.391360" elapsed="0.005709">No keyword with name 'Fechar o Navegador' found.</status>
+</kw>
+<status status="FAIL" start="2025-02-03T18:26:05.018275" elapsed="6.384671">No keyword with name 'standard_user' found.
+
+Also teardown failed:
+No keyword with name 'Fechar o Navegador' found.</status>
+</test>
+<test id="s1-s1-s1-s1-t4" name="Caso de Teste 04: Remover um produto do carrinho" line="35">
+<kw name="Configurar Navegador" owner="saucedemo_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-03T18:26:11.412241" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-03T18:26:11.412241" elapsed="9.915098"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-03T18:26:21.329077" elapsed="0.036849"/>
+</kw>
+<status status="PASS" start="2025-02-03T18:26:11.412241" elapsed="9.954698"/>
+</kw>
+<kw name="Dado que o usuário está logado no sistema" owner="saucedemo_keywords">
+<kw name="standard_user">
+<msg time="2025-02-03T18:26:21.379537" level="FAIL">No keyword with name 'standard_user' found.</msg>
+<var>${usuario}</var>
+<var>${senha}</var>
+<arg>secret_sauce</arg>
+<status status="FAIL" start="2025-02-03T18:26:21.374549" elapsed="0.006152">No keyword with name 'standard_user' found.</status>
+</kw>
+<kw name="Dado que o usuário está na página de login" owner="saucedemo_keywords">
+<status status="NOT RUN" start="2025-02-03T18:26:21.385726" elapsed="0.002009"/>
+</kw>
+<kw name="Quando ele insere o usuário &quot;${usuario}&quot; e a senha &quot;${senha}&quot;" owner="saucedemo_keywords" source_name="Quando ele insere o usuário &quot;${usuario}&quot; e a senha &quot;${senha}&quot;">
+<status status="NOT RUN" start="2025-02-03T18:26:21.387735" elapsed="0.000000"/>
+</kw>
+<kw name="E clica no botão de login" owner="saucedemo_keywords">
+<status status="NOT RUN" start="2025-02-03T18:26:21.389742" elapsed="0.000000"/>
+</kw>
+<kw name="Então ele deve ver a página inicial" owner="saucedemo_keywords">
+<status status="NOT RUN" start="2025-02-03T18:26:21.389742" elapsed="0.002004"/>
+</kw>
+<status status="FAIL" start="2025-02-03T18:26:21.367936" elapsed="0.023810">No keyword with name 'standard_user' found.</status>
+</kw>
+<kw name="E ele adicionou o produto &quot;${PRODUTO}&quot; ao carrinho">
+<status status="NOT RUN" start="2025-02-03T18:26:21.392864" elapsed="0.004445"/>
+</kw>
+<kw name="Quando ele remove o produto &quot;${PRODUTO}&quot; do carrinho">
+<status status="NOT RUN" start="2025-02-03T18:26:21.400762" elapsed="0.002991"/>
+</kw>
+<kw name="Então ele deve ver que o carrinho contém &quot;0&quot; itens">
+<status status="NOT RUN" start="2025-02-03T18:26:21.404924" elapsed="0.002341"/>
+</kw>
+<kw name="Fechar o Navegador" type="TEARDOWN">
+<msg time="2025-02-03T18:26:21.415976" level="FAIL">No keyword with name 'Fechar o Navegador' found.</msg>
+<status status="FAIL" start="2025-02-03T18:26:21.410633" elapsed="0.007352">No keyword with name 'Fechar o Navegador' found.</status>
+</kw>
+<status status="FAIL" start="2025-02-03T18:26:11.404797" elapsed="10.014745">No keyword with name 'standard_user' found.
+
+Also teardown failed:
+No keyword with name 'Fechar o Navegador' found.</status>
+</test>
+<doc>Testes automatizados para o site SauceDemo no formato BDD.</doc>
+<status status="FAIL" start="2025-02-03T18:25:30.495487" elapsed="50.924055"/>
 </suite>
-<status status="FAIL" start="2024-11-17T00:15:40.741438" elapsed="19.528493"/>
+<status status="FAIL" start="2025-02-03T18:25:30.490896" elapsed="50.928646"/>
 </suite>
-<status status="FAIL" start="2024-11-17T00:15:40.723062" elapsed="19.546869"/>
+<status status="FAIL" start="2025-02-03T18:25:30.486685" elapsed="50.932857"/>
 </suite>
-<status status="FAIL" start="2024-11-17T00:15:40.546363" elapsed="19.723568"/>
+<status status="FAIL" start="2025-02-03T18:25:30.453087" elapsed="50.982429"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">pesquisa_produto</stat>
+<stat pass="0" fail="1" skip="0">saucedemo</stat>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Robot Framework">Robot Framework</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Amazon-Tests">Robot Framework.Amazon-Tests</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Tests">Robot Framework.Amazon-Tests.Tests</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Amazon Tests">Robot Framework.Amazon-Tests.Tests.Amazon Tests</stat>
+<stat pass="0" fail="4" skip="0" id="s1" name="AutomationRobotFramework">AutomationRobotFramework</stat>
+<stat pass="0" fail="4" skip="0" id="s1-s1" name="Amazon-Tests">AutomationRobotFramework.Amazon-Tests</stat>
+<stat pass="0" fail="4" skip="0" id="s1-s1-s1" name="Tests">AutomationRobotFramework.Amazon-Tests.Tests</stat>
+<stat pass="0" fail="4" skip="0" id="s1-s1-s1-s1" name="Saucedemo Tests">AutomationRobotFramework.Amazon-Tests.Tests.Saucedemo Tests</stat>
 </suite>
 </statistics>
 <errors>
